@@ -8,6 +8,7 @@ if oMaster != OBJECT_INVALID
     SetLocalObject(oMurder, "killer", oMaster)
 else
     SetLocalObject(oMurder, "killer", oMurder)
+end
 
 oKiller = GetLocalObject(oMurder, "killer")
 
@@ -25,5 +26,4 @@ oKiller = GetLocalObject(oMurder, "killer")
             end
 
           end
-
-        end
+end
