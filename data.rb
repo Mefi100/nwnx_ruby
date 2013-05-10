@@ -1,29 +1,35 @@
 module KK_NWN_Data
 
   def getNWNDay(day)
+    
+    daytab = []
    
        if day%10 == 0
        
-           return "27"
+         daytab[0]=27
+         daytab[1]=0
+         return daytab
            
        elsif day == 31
    
-           return "30"
-           
+        daytab[0]=28
+        daytab[1]=0
+        return daytab 
+          
        else
        
-           pom = ((day%10)-1)*3;
+           pom = ((day%10)-1)*3
        end
 
-       poczatek = (pom+1).to_s
-       koniec = (pom+3).to_s
+       daytab[0] = pom+1
+       daytab[1] = pom+3
 
-       return poczatek + " - " + koniec
+       return daytab
   end
        
   def getMonth(day,month)
    
-       x = month%4;
+       x = (month-1)%4;
        z = ((day-1)/10)+1;
        
        if z == 4 
@@ -32,7 +38,7 @@ module KK_NWN_Data
          
        y = 3*x + z
 
-       return y.to_s
+       return y
   end
    
   def getNWNYear(month, year)
@@ -48,13 +54,13 @@ module KK_NWN_Data
         baza += 2
     end
     
-    return (baza+100).to_s
+    return baza+100
   end
 
  
-  def getNWNDate(day,month,year)
-  return getNWNDay(day) + " " + getMonth(day,month) + " " + getNWNYear(month,year) + "r."
-  end
+ # def getNWNDate(day,month,year)
+ # return getNWNDay(day).to_s + " " + getMonth(day,month).to_s + " " + getNWNYear(month,year).to_s + "r."
+ # end
 
 end 
    
