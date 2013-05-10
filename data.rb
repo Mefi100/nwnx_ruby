@@ -57,7 +57,4 @@ module KK_NWN_Data
   end
 
 end 
-
-time = Time.new
-puts KK_NWN_Data.getNWNDay(time.day(), time.month(), time.year())  
    
