@@ -32,7 +32,7 @@ module KK_NWN_Data
          
        y = 3*x + z
 
-       return y
+       return y.to_s
   end
    
   def getNWNYear(month, year)
@@ -48,7 +48,7 @@ module KK_NWN_Data
         baza += 2
     end
     
-    return baza+100
+    return (baza+100).to_s
   end
 
  
