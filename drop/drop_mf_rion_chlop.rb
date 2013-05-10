@@ -1,0 +1,5 @@
+include NWScript
+
+oMurder = GetLastKiller()
+
+
