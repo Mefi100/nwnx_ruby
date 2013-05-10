@@ -53,7 +53,7 @@ module KK_NWN_Data
 
  
   def getNWNDate(day,month,year)
-  return getNWNDay(day) + " " + getMount(day,month) + " " + getNWNYear(month,year) + "r."
+  return getNWNDay(day) + " " + getMonth(day,month) + " " + getNWNYear(month,year) + "r."
   end
 
 end 
