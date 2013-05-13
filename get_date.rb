@@ -17,4 +17,10 @@ else
 dzien_miesiaca = dzien[0]  
 end
 
-SetCalendar(rok, miesiac, dzien_miesiaca)
+miesiace = []
+miesiace = ["Młodego Stycznia", "Sennego Lutego", "Budzącego Marca", "Wielobarwnego Kwietnia",
+ "Złotego Maja", "Błyszczącego Czerwca", "Promiennego Lipca", "Pracowitego Sierpnia",
+ "Srebrzystego Września", "Leniwego Października", "Sennego Listopada", "Starego Grudnia"]
+
+data = "Aktualnie jest "+dzien_miesiaca.to_s+" "+miesiace[miesiac-1]+" "+rok.to_s+" r."
+SendMessageToAllDMs(data)
