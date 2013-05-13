@@ -1,9 +1,6 @@
-include NWScript
-
-begin 
-oMurder = GetLastKiller()
-
+begin
+  puts "test" 
+  oMurder = GetLastKiller()
 rescue Exception => msg   
-  puts msg.message 
-  puts msg.backtrace.inspect 
+  puts msg.message  
 end
