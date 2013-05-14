@@ -1,4 +1,4 @@
-module NWNX_Funcs
+module NWScript::NWNX_Funcs
   
   CREATURE_EVENT_HEARTBEAT              = 0
   CREATURE_EVENT_PERCEPTION             = 1

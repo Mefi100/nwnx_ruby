@@ -1,4 +1,4 @@
-module NWNX_Chat
+module NWScript::NWNX_Chat
   
 LIST_ITEM_NAME = "dmbPC_"
 PC_ID_NAME = "dmbID"
