@@ -57,10 +57,5 @@ module KK_NWN_Data
     return baza+100
   end
 
- 
- # def getNWNDate(day,month,year)
- # return getNWNDay(day).to_s + " " + getMonth(day,month).to_s + " " + getNWNYear(month,year).to_s + "r."
- # end
-
 end 
    
