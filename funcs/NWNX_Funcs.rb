@@ -1,4 +1,5 @@
-module NWScript::NWNX_Funcs
+module NWScript
+module NWNX_Funcs
   
   CREATURE_EVENT_HEARTBEAT              = 0
   CREATURE_EVENT_PERCEPTION             = 1
@@ -139,35 +140,35 @@ module NWScript::NWNX_Funcs
   Struct.new("Timeval", :sec, :usec)
   
   def NWNXFuncsZero(oObject, sFunc)
-    SetLocalString(oObject, sFunc, "          ")
-    return  GetLocalString(oObject, sFunc).to_i
+    NWScript.SetLocalString(oObject, sFunc, "          ")
+    return  NWScript.GetLocalString(oObject, sFunc).to_i
   end
   
   def NWNXFuncsOne(oObject, sFunc, nVal1)
-    SetLocalString(oObject, sFunc, nVal1.to_s + "          ")
-    return  GetLocalString(oObject, sFunc).to_i 
+    NWScript.SetLocalString(oObject, sFunc, nVal1.to_s + "          ")
+    return  NWScript.GetLocalString(oObject, sFunc).to_i 
   end
   
   def NWNXFuncsTwo (oObject, sFunc, nVal1, nVal2)
-    SetLocalString(oObject, sFunc, nVal1.to_s + " " + nVal2.to_s + "          ")
-    return  GetLocalString(oObject, sFunc).to_i
+    NWScript.SetLocalString(oObject, sFunc, nVal1.to_s + " " + nVal2.to_s + "          ")
+    return  NWScript.GetLocalString(oObject, sFunc).to_i
   end
   
   def NWNXFuncsThree (oObject, sFunc, nVal1, nVal2, nVal3)
-    SetLocalString(oObject, sFunc, nVal1.to_s + " " + nVal2.to_s +
+    NWScript.SetLocalString(oObject, sFunc, nVal1.to_s + " " + nVal2.to_s +
           " " + nVal3.to_s + "          ")
-    return  GetLocalString(oObject, sFunc).to_i
+    return  NWScript.GetLocalString(oObject, sFunc).to_i
   end
   
   def USleep (usec)
-    NWNXFuncsOne(GetModule(), "NWNX!FUNCS!USLEEP", usec)
+    NWNXFuncsOne(NWScript.GetModule(), "NWNX!FUNCS!USLEEP", usec)
   end
   
   def GetTimeOfDay  
         sFunc = "NWNX!FUNCS!GETTIMEOFDAY"
-        SetLocalString(GetModule(), sFunc, "                                         ")
+        NWScript.SetLocalString(NWScript.GetModule(), sFunc, "                                         ")
         
-        time = GetLocalString(GetModule(), sFunc)
+        time = NWScript.GetLocalString(NWScript.GetModule(), sFunc)
         
         if time.include?(".")
             sec = (time[ 0 .. time.index('.')]-1).to_i
@@ -206,4 +207,6 @@ module NWScript::NWNX_Funcs
     return NWNXFuncsOne(oCreature, "NWNX!FUNCS!SETACNATURALBASE", nAC)
   end
   
+end
+
 end

@@ -1,4 +1,5 @@
-module NWScript::NWNX_Chat
+module NWScript
+module NWNX_Chat
   
 LIST_ITEM_NAME = "dmbPC_"
 PC_ID_NAME = "dmbID"
@@ -128,4 +129,5 @@ CHAT_CHANNEL_DM_WHISPER  = 19
      end
          
   
+end
 end
