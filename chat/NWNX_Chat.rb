@@ -1,17 +1,17 @@
 module NWNX_Chat
   
-LIST_ITEM_NAME = "dmbPC_";
-PC_ID_NAME = "dmbID";
+LIST_ITEM_NAME = "dmbPC_"
+PC_ID_NAME = "dmbID"
   
-CHAT_CHANNEL_TALK        = 1;
-CHAT_CHANNEL_SHOUT       = 2;
-CHAT_CHANNEL_WHISPER     = 3;
-CHAT_CHANNEL_PRIVATE     = 4;
-CHAT_CHANNEL_SERVER_MSG  = 5;
-CHAT_CHANNEL_PARTY       = 6;
-CHAT_CHANNEL_DM_CHANNEL  = 14;
-CHAT_CHANNEL_DM_TALK     = 17;
-CHAT_CHANNEL_DM_WHISPER  = 19;  
+CHAT_CHANNEL_TALK        = 1
+CHAT_CHANNEL_SHOUT       = 2
+CHAT_CHANNEL_WHISPER     = 3
+CHAT_CHANNEL_PRIVATE     = 4
+CHAT_CHANNEL_SERVER_MSG  = 5
+CHAT_CHANNEL_PARTY       = 6
+CHAT_CHANNEL_DM_CHANNEL  = 14
+CHAT_CHANNEL_DM_TALK     = 17
+CHAT_CHANNEL_DM_WHISPER  = 19  
 
   class Chat_Message
   
@@ -40,7 +40,7 @@ CHAT_CHANNEL_DM_WHISPER  = 19;
       oMod = GetModule()
       
       sMemory=""
-        for i in 0..16 # reserve 8*128 bytes
+        for i in 0..8 # reserve 8*128 bytes
           sMemory += "................................................................................................................................"
         end
         
