@@ -40,3 +40,5 @@ module NWScript
       NWScript.ExecuteScript("relay_delay",$OBJECT_SELF) 
    end 
 end 
+
+require 'drop_monsters.rb'
