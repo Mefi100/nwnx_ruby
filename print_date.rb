@@ -18,12 +18,12 @@ else
 dzien_miesiaca = dzien[0]  
 end
 
-ksiezyc = "Faza ksiÄ™Å¼yca: "+faza(dzien_miesiaca, miesiac, rok)
+ksiezyc = "Faza ksiê¿yca: "+faza(dzien_miesiaca, miesiac, rok)
 
 miesiace = []
-miesiace = ["MÅ‚odego Stycznia", "Sennego Lutego", "BudzÄ…cego Marca", "Wielobarwnego Kwietnia",
- "ZÅ‚otego Maja", "BÅ‚yszczÄ…cego Czerwca", "Promiennego Lipca", "Pracowitego Sierpnia",
- "Srebrzystego WrzeÅ›nia", "Leniwego PaÅºdziernika", "Sennego Listopada", "Starego Grudnia"]
+miesiace = ["M³odego Stycznia", "Sennego Lutego", "Budz¹cego Marca", "Wielobarwnego Kwietnia",
+ "Z³otego Maja", "B³yszcz¹cego Czerwca", "Promiennego Lipca", "Pracowitego Sierpnia",
+ "Srebrzystego Wrzeœnia", "Leniwego PaŸdziernika", "Sennego Listopada", "Starego Grudnia"]
 
 data = "Aktualnie jest "+dzien_miesiaca.to_s+" "+miesiace[miesiac-1]+" "+rok.to_s+" r."
 oPC = GetEnteringObject()
