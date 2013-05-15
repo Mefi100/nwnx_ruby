@@ -24,9 +24,15 @@ miesiace = []
 miesiace = ["M³odego Stycznia", "Sennego Lutego", "Budz¹cego Marca", "Wielobarwnego Kwietnia",
  "Z³otego Maja", "B³yszcz¹cego Czerwca", "Promiennego Lipca", "Pracowitego Sierpnia",
  "Srebrzystego Wrzeœnia", "Leniwego PaŸdziernika", "Sennego Listopada", "Starego Grudnia"]
+ 
+ zodiak = []
+ zodiak = ["Kruka", "Dzbana", "Goblina", "Dêbu", "Damy", "Lorda", "Smoka", "Tygrysa",
+   "Rycerza", "Feniksa", "Maga", "Wie¿y"]  
 
 data = "Aktualnie jest "+dzien_miesiaca.to_s+" "+miesiace[miesiac-1]+" "+rok.to_s+" r."
+znak_zodiaku = "W tym miesi¹cu S³oñce znajduje siê w gwiazdozbiorze "+zodiak[miesiac-1]  
 oPC = GetEnteringObject()
 SendMessageToPC(oPC, data)
+SendMessageToPC(oPC, znak_zodiaku)
 SendMessageToPC(oPC, ksiezyc)
 
