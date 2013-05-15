@@ -1,3 +1,4 @@
+module NWScript
 module DropMonsters
 
 def RandomGem()
@@ -243,3 +244,4 @@ end
   end
 
  end
+end

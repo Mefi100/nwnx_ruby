@@ -1,1 +1,1 @@
-DropMonsters.drop_mf_sowa
+NWScript::DropMonsters.drop_mf_sowa
