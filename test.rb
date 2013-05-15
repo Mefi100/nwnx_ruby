@@ -1,1 +1,1 @@
-NWScript::DropMonsters.drop_mf_sowa
+load 'print_date.rb'
