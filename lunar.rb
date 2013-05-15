@@ -32,6 +32,6 @@ def faza(d,m,r)
     return "III kwadra"
   else
     return "zbli¿a siê nów..."
-  end
+  end 
   
 end
