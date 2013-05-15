@@ -1,5 +1,6 @@
 require 'data'
 include KK_NWN_Data
+include NWScript
 
 time = Time.new
 dzien = getNWNDay(time.day)
@@ -22,4 +23,5 @@ miesiace = ["Młodego Stycznia", "Sennego Lutego", "Budzącego Marca", "Wielobar
  "Srebrzystego Września", "Leniwego Października", "Sennego Listopada", "Starego Grudnia"]
 
 data = "Aktualnie jest "+dzien_miesiaca.to_s+" "+miesiace[miesiac-1]+" "+rok.to_s+" r."
-return data
+oPC = GetEnteringObject()
+SendMessageToPC(oPC, data)
