@@ -1,5 +1,5 @@
 require 'data.rb'
-require 'lunar.rb'
+load 'lunar.rb'
 include KK_NWN_Data
 include NWScript
 
@@ -18,12 +18,12 @@ else
 dzien_miesiaca = dzien[0]  
 end
 
-ksiezyc = "Faza ksiê¿yca: "+faza(dzien_miesiaca, miesiac, rok)
+ksiezyc = "Faza ksiï¿½yca: "+faza(dzien_miesiaca, miesiac, rok)
 
 miesiace = []
-miesiace = ["M³odego Stycznia", "Sennego Lutego", "Budz¹cego Marca", "Wielobarwnego Kwietnia",
- "Z³otego Maja", "B³yszcz¹cego Czerwca", "Promiennego Lipca", "Pracowitego Sierpnia",
- "Srebrzystego Wrzeœnia", "Leniwego PaŸdziernika", "Sennego Listopada", "Starego Grudnia"]
+miesiace = ["Mï¿½odego Stycznia", "Sennego Lutego", "Budzï¿½cego Marca", "Wielobarwnego Kwietnia",
+ "Zï¿½otego Maja", "Bï¿½yszczï¿½cego Czerwca", "Promiennego Lipca", "Pracowitego Sierpnia",
+ "Srebrzystego Wrzeï¿½nia", "Leniwego Paï¿½dziernika", "Sennego Listopada", "Starego Grudnia"]
 
 data = "Aktualnie jest "+dzien_miesiaca.to_s+" "+miesiace[miesiac-1]+" "+rok.to_s+" r."
 oPC = GetEnteringObject()
