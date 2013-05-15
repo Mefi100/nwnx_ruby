@@ -7,13 +7,13 @@ module KK_NWN_Data
        if day%10 == 0
        
          daytab[0]=27
-         daytab[1]=0
+         daytab[1]=28
          return daytab
            
        elsif day == 31
    
-        daytab[0]=28
-        daytab[1]=0
+        daytab[0]=29
+        daytab[1]=30
         return daytab 
           
        else
