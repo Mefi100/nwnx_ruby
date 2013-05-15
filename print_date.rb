@@ -24,3 +24,4 @@ miesiace = ["Młodego Stycznia", "Sennego Lutego", "Budzącego Marca", "Wielobar
 
 data = "Aktualnie jest "+dzien_miesiaca.to_s+" "+miesiace[miesiac-1]+" "+rok.to_s+" r."
 SendMessageToPC($OBJECT_SELF, data)
+puts data
