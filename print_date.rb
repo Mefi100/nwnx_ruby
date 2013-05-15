@@ -23,9 +23,5 @@ miesiace = ["Młodego Stycznia", "Sennego Lutego", "Budzącego Marca", "Wielobar
  "Srebrzystego Września", "Leniwego Października", "Sennego Listopada", "Starego Grudnia"]
 
 data = "Aktualnie jest "+dzien_miesiaca.to_s+" "+miesiace[miesiac-1]+" "+rok.to_s+" r."
-oPC = GetFirstPC()
-        while (oPC != OBJECT_INVALID)
-            SendMessageToPC(oPC, data)
-            SendMessageToPC(oPC, "Test string: "+GetName($OBJECT_SELF))
-            oPC = GetNextPC()
-        end
+oPC = $OBJECT_SELF
+SendMessageToPC(oPC, data)
