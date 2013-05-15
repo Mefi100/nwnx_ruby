@@ -26,5 +26,6 @@ data = "Aktualnie jest "+dzien_miesiaca.to_s+" "+miesiace[miesiac-1]+" "+rok.to_
 oPC = GetFirstPC()
         while (oPC != OBJECT_INVALID)
             SendMessageToPC(oPC, data)
+            SendMessageToPC(oPC, "Test string: "+GetName($OBJECT_SELF))
             oPC = GetNextPC()
         end
