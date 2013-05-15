@@ -1,4 +1,5 @@
-require 'data'
+require 'data.rb'
+require 'lunar.rb'
 include KK_NWN_Data
 include NWScript
 
@@ -17,6 +18,8 @@ else
 dzien_miesiaca = dzien[0]  
 end
 
+ksiezyc = "Faza księżyca: "+faza(dzien_miesiaca, miesiac, rok)
+
 miesiace = []
 miesiace = ["Młodego Stycznia", "Sennego Lutego", "Budzącego Marca", "Wielobarwnego Kwietnia",
  "Złotego Maja", "Błyszczącego Czerwca", "Promiennego Lipca", "Pracowitego Sierpnia",
@@ -25,3 +28,5 @@ miesiace = ["Młodego Stycznia", "Sennego Lutego", "Budzącego Marca", "Wielobar
 data = "Aktualnie jest "+dzien_miesiaca.to_s+" "+miesiace[miesiac-1]+" "+rok.to_s+" r."
 oPC = GetEnteringObject()
 SendMessageToPC(oPC, data)
+SendMessageToPC(oPC, ksiezyc)
+

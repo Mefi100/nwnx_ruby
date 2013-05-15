@@ -18,18 +18,20 @@ def faza(d,m,r)
   
   if faza == 1.0 || faza <= 0.02
     return "Nów" 
+    elsif faza > 0.02 && faza < 0.23
+        return "zbliża się I kwadra..."
   elsif faza >= 0.23 && faza <= 0.26
     return "I kwadra"
+    elsif faza > 0.26 && faza < 0.49
+        return "zbliża się pełnia..."
   elsif faza >= 0.49 && faza <= 0.51
     return "Pełnia"
+    elsif faza >  0.51 && faza <  0.73
+        return "zbliża się III kwadra"
   elsif faza >= 0.73 && faza <= 0.77
     return "III kwadra"
   else
-    return faza.to_s
+    return "zbliża się nów..."
   end
   
-end
-
-(1..30).each do |i|
-  puts faza(i, 2, 1596)
 end
