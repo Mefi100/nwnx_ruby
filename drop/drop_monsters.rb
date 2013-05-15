@@ -1,5 +1,4 @@
-module NWSCript
-  module DropMonsters
+module DropMonsters
 
 def RandomGem()
   tab = %w[nw_it_gem009 nw_it_gem005 nw_it_gem008 nw_it_gem012 nw_it_gem010 nw_it_gem013]
@@ -243,5 +242,4 @@ end
      end
   end
 
- end  
-end
+ end
