@@ -1,17 +1,22 @@
-require 'drop_inc.rb'
-include NWScript
+module NWSCript
+  module DropMonsters
+
+def RandomGem()
+  tab = %w[nw_it_gem009 nw_it_gem005 nw_it_gem008 nw_it_gem012 nw_it_gem010 nw_it_gem013]
+  return tab[rand(tab.length)]
+end
 
   def drop_05_graz_wilk
     nRandom = rand(100)+1
   
     if nRandom <= 10
-    CreateItemOnObject("mf_alchemy_25", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_alchemy_25", $OBJECT_SELF, 1)
     end
   
     nRandom = rand(100)+1
   
     if nRandom <= 15
-    CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
     end
   end
 
@@ -19,7 +24,7 @@ include NWScript
     nRandom = rand(100)+1
   
     if nRandom <= 6
-    CreateItemOnObject("mf_pukiel_fey", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_pukiel_fey", $OBJECT_SELF, 1)
     end
   end
 
@@ -27,7 +32,7 @@ include NWScript
     nRandom = rand(100)+1
   
     if nRandom <= 9
-    CreateItemOnObject("mf_pukiel_fey", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_pukiel_fey", $OBJECT_SELF, 1)
     end
   end
 
@@ -35,7 +40,7 @@ include NWScript
     nRandom = rand(100)+1
   
     if nRandom <= 20
-    CreateItemOnObject("mf_alchemy_36", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_alchemy_36", $OBJECT_SELF, 1)
     end
   end
 
@@ -43,7 +48,7 @@ include NWScript
     nRandom = rand(100)+1
   
     if nRandom <= 3
-    CreateItemOnObject("mf_pukiel_fey", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_pukiel_fey", $OBJECT_SELF, 1)
     end
   end
 
@@ -51,13 +56,13 @@ include NWScript
     nRandom = rand(100)+1
   
     if nRandom <= 25 
-    CreateItemOnObject("mf_alchemy_28", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_alchemy_28", $OBJECT_SELF, 1)
     end
   
     nRandom = rand(100)+1
   
     if nRandom <= 10
-    CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
     end 
   end
 
@@ -65,7 +70,7 @@ include NWScript
     nRandom = rand(100)+1
   
     if nRandom <= 25
-    CreateItemOnObject("mf_ada_trash", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_ada_trash", $OBJECT_SELF, 1)
     end
   end
 
@@ -73,13 +78,13 @@ include NWScript
     nRandom = rand(100)+1
   
     if nRandom <= 5
-    CreateItemOnObject("mf_top_wodza_b2", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_top_wodza_b2", $OBJECT_SELF, 1)
     end
   
     nRandom = rand(100)+1
   
     if nRandom == 100
-    CreateItemOnObject("mf_zbroja_kr_bar", $OBJECT_SELF, 1)
+    NWSCript.CreateItemOnObject("mf_zbroja_kr_bar", $OBJECT_SELF, 1)
     end
   end
   
@@ -87,7 +92,7 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 40
-     CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
      end
   end
   
@@ -95,13 +100,13 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 33 
-     CreateItemOnObject("mf_alchemy_28", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_alchemy_28", $OBJECT_SELF, 1)
      end
     
     nRandom = rand(100)+1
     
      if nRandom <= 20
-     CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
      end 
   end
   
@@ -109,13 +114,13 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 20
-     CreateItemOnObject("mf_alchemy_25", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_alchemy_25", $OBJECT_SELF, 1)
      end
     
     nRandom = rand(100)+1
     
      if nRandom <= 30
-     CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
      end
   end
   
@@ -123,7 +128,7 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 4
-     CreateItemOnObject("mf_sejm_pot_kap", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_sejm_pot_kap", $OBJECT_SELF, 1)
      end
   end
   
@@ -131,7 +136,7 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 25
-     CreateItemOnObject("mf_mit_trash", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_mit_trash", $OBJECT_SELF, 1)
      end
   end
   
@@ -139,7 +144,7 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 50
-     CreateItemOnObject("mf_alchemy_30", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_alchemy_30", $OBJECT_SELF, 1)
      end
   end
   
@@ -147,7 +152,7 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 20
-     CreateItemOnObject("mf_jad_osy", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_jad_osy", $OBJECT_SELF, 1)
      end
   end
   
@@ -155,13 +160,13 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 50
-     CreateItemOnObject("mf_alchemy_27", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_alchemy_27", $OBJECT_SELF, 1)
      end
     
     nRandom = rand(100)+1
     
      if nRandom <= 5
-     CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_craft_skora", $OBJECT_SELF, 1)
      end
   end
   
@@ -169,14 +174,14 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 5
-     CreateItemOnObject("mf_klejnot_cien", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_klejnot_cien", $OBJECT_SELF, 1)
      end
     
     nRandom = rand(100)+1
     
      if nRandom == 100
       sItem = mf_br_cienia_00+(rand(6)+1).to_s
-     CreateItemOnObject(sItem, $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject(sItem, $OBJECT_SELF, 1)
      end
   end
   
@@ -184,7 +189,7 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 50
-     CreateItemOnObject("mf_alchemy_31", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_alchemy_31", $OBJECT_SELF, 1)
      end
   end
   
@@ -192,7 +197,7 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 25
-     CreateItemOnObject("mf_jad_paj_w", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_jad_paj_w", $OBJECT_SELF, 1)
      end
   end
   
@@ -200,7 +205,7 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 20
-     CreateItemOnObject("mf_jad_paj_o", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_jad_paj_o", $OBJECT_SELF, 1)
      end
   end
   
@@ -208,7 +213,7 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 5
-     CreateItemOnObject("nw_it_msmlmisc13", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("nw_it_msmlmisc13", $OBJECT_SELF, 1)
      end
   end
   
@@ -216,7 +221,7 @@ include NWScript
     nRandom = rand(100)+1
     
      if nRandom <= 4
-     CreateItemOnObject("mf_tru_bulaw", $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject("mf_tru_bulaw", $OBJECT_SELF, 1)
      end
   end
   
@@ -225,7 +230,7 @@ include NWScript
     
      if nRandom <= 15
       sGem = RandomGem()
-      CreateItemOnObject(sGem, $OBJECT_SELF, 1)
+      NWSCript.CreateItemOnObject(sGem, $OBJECT_SELF, 1)
      end
   end
   
@@ -234,6 +239,9 @@ include NWScript
     
      if nRandom <= 5
      sGem = RandomGem()
-     CreateItemOnObject(sGem, $OBJECT_SELF, 1)
+     NWSCript.CreateItemOnObject(sGem, $OBJECT_SELF, 1)
      end
   end
+
+ end  
+end

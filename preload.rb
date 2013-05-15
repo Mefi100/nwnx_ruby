@@ -39,6 +39,4 @@ module NWScript
       NWScript.SetLocalInt(mod,"RELAY_CMD",cmd) 
       NWScript.ExecuteScript("relay_delay",$OBJECT_SELF) 
    end 
-end 
-
-require 'drop_monsters.rb'
+end
