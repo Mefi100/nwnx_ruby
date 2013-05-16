@@ -8,7 +8,7 @@ nDM = GetIsDM(oChatter)
 def AssociateTalk(oChatter, ass_type, sMsg)
   oTowarzysz= GetAssociate(ass_type,oChatter)
       if OBJECT_INVALID != oTowarzysz
-        AssignCommand(oTowarzysz, SpeakString(sMsg))
+      NWScript.AssignCommand(oTowarzysz){SpeakString(sMsg)}
       end
 end
 
@@ -25,7 +25,7 @@ if sMessage[0, 1] == "#"
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     oTowarzysz = GetHenchman(oChatter) 
     if OBJECT_INVALID != oTowarzysz
-      AssignCommand(oTowarzysz, SpeakString(sMsg))
+    NWScript.AssignCommand(oTowarzysz){SpeakString(sMsg)}
     end   
     
   elsif sCmd == "#prz"
@@ -74,7 +74,7 @@ if sMessage[0, 1] == "#"
   elsif sCmd[0 .. 2] == "#bn" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     oSpeaker = GetLocalObject(oChatter, "dm_speaker_"+sCmd[3 .. 3])
-    AssignCommand(oSpeaker, SpeakString(sMsg))
+    NWScript.AssignCommand(oSpeaker){SpeakString(sMsg)}
       
   elsif sCmd == "#dm_obiekt_id" && nDM == 1
     nID=sMsg.to_i
