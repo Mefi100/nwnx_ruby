@@ -1,5 +1,5 @@
-require 'data.rb'
-require 'lunar.rb'
+require 'data'
+require 'lunar'
 include KK_NWN_Data
 include NWScript
 
