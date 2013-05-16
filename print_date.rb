@@ -1,3 +1,4 @@
+begin
 require 'data.rb'
 require 'lunar.rb'
 include KK_NWN_Data
@@ -18,21 +19,24 @@ else
 dzien_miesiaca = dzien[0]  
 end
 
-ksiezyc = "Faza ksiê¿yca: "+faza(dzien_miesiaca, miesiac, rok)
+ksiezyc = "Faza ksiï¿½yca: "+faza(dzien_miesiaca, miesiac, rok)
 
 miesiace = []
-miesiace = ["M³odego Stycznia", "Sennego Lutego", "Budz¹cego Marca", "Wielobarwnego Kwietnia",
- "Z³otego Maja", "B³yszcz¹cego Czerwca", "Promiennego Lipca", "Pracowitego Sierpnia",
- "Srebrzystego Wrzeœnia", "Leniwego PaŸdziernika", "Sennego Listopada", "Starego Grudnia"]
+miesiace = ["Mï¿½odego Stycznia", "Sennego Lutego", "Budzï¿½cego Marca", "Wielobarwnego Kwietnia",
+ "Zï¿½otego Maja", "Bï¿½yszczï¿½cego Czerwca", "Promiennego Lipca", "Pracowitego Sierpnia",
+ "Srebrzystego Wrzeï¿½nia", "Leniwego Paï¿½dziernika", "Sennego Listopada", "Starego Grudnia"]
  
  zodiak = []
- zodiak = ["Kruka", "Dzbana", "Goblina", "Dêbu", "Damy", "Lorda", "Smoka", "Tygrysa",
-   "Rycerza", "Feniksa", "Maga", "Wie¿y"]  
+ zodiak = ["Kruka", "Dzbana", "Goblina", "Dï¿½bu", "Damy", "Lorda", "Smoka", "Tygrysa",
+   "Rycerza", "Feniksa", "Maga", "Wieï¿½y"]  
 
 data = "Aktualnie jest "+dzien_miesiaca.to_s+" "+miesiace[miesiac-1]+" "+rok.to_s+" r."
-znak_zodiaku = "W tym miesi¹cu S³oñce znajduje siê w gwiazdozbiorze "+zodiak[miesiac-1]  
+znak_zodiaku = "W tym miesiï¿½cu Sï¿½oï¿½ce znajduje siï¿½ w gwiazdozbiorze "+zodiak[miesiac-1]  
 oPC = GetEnteringObject()
 SendMessageToPC(oPC, data)
 SendMessageToPC(oPC, znak_zodiaku)
 SendMessageToPC(oPC, ksiezyc)
+rescue Exception => e  
+  puts e.message   
+end 
 
