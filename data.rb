@@ -57,7 +57,7 @@ module KK_NWN_Data
     return baza+100
   end
   
-def lunar(d,m,r)
+ def lunar(d,m,r)
   x=((m+9)/12).to_i
   a = 4716 + r + x
   y = 275 * (m / 9)
@@ -69,9 +69,9 @@ def lunar(d,m,r)
   e = w.to_i
   jd = b + 38 - e 
   return (jd/29.5305902778)-0.3033
-end
+ end
 
-def faza(d,m,r)
+ def faza(d,m,r)
   faza = lunar(d,m,r) - lunar(d,m,r).to_i
   faza = (faza*100).round / 100.0
   
@@ -93,7 +93,7 @@ def faza(d,m,r)
     return "zbli�a si� n�w..."
   end 
   
-end
+ end
 
 end 
    
