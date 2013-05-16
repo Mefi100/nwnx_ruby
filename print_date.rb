@@ -1,4 +1,4 @@
-require 'data.rb'
+load 'data.rb'
 include KK_NWN_Data
 include NWScript
 
