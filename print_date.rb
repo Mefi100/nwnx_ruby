@@ -1,4 +1,3 @@
-begin
 require 'data.rb'
 require 'lunar.rb'
 include KK_NWN_Data
@@ -36,7 +35,4 @@ oPC = GetEnteringObject()
 SendMessageToPC(oPC, data)
 SendMessageToPC(oPC, znak_zodiaku)
 SendMessageToPC(oPC, ksiezyc)
-rescue Exception => e  
-  puts e.message   
-end 
 
