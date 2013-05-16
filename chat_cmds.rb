@@ -1,3 +1,4 @@
+require 'kolor.rb'
 include NWScript
 include Kolory
 
