@@ -1,4 +1,4 @@
-require 'kolor.rb'
+load 'kolor.rb'
 include NWScript
 include Kolory
 
@@ -97,10 +97,10 @@ if sMessage[0, 1] == "#"
   elsif sCmd == "#dm_komendy" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     SendMessageToPC(oChatter, Kolor("BIALY")+"LISTA KOMEND MG:")
-    SendMessageToPC(oChatter, "(W miejscu, gdzie jest {ID} trzeba wstawiÄ‡ konkretny numer - parametr komendy)")
-    SendMessageToPC(oChatter, Kolor("BIALY")+"#dm_obiekt_id {ID} - [DM TOOL #1] nadanie z panelu tekstu wyÅ›wietlanego przez obiekt")
-    SendMessageToPC(oChatter, "#dm_obiekt_app {ID} - [DM TOOL #1] nadanie obiektowi wyglÄ…du (wymaga zresetowania lokacji)")
-    SendMessageToPC(oChatter, Kolor("BIALY")+"#bn{ID} - [DM TOOL #4] mÃ³wienie oznaczonym NPC")
+    SendMessageToPC(oChatter, "(W miejscu, gdzie jest {ID} trzeba wstawiæ konkretny numer - parametr komendy)")
+    SendMessageToPC(oChatter, Kolor("BIALY")+"#dm_obiekt_id {ID} - [DM TOOL #1] nadanie z panelu tekstu wyœwietlanego przez obiekt")
+    SendMessageToPC(oChatter, "#dm_obiekt_app {ID} - [DM TOOL #1] nadanie obiektowi wygl¹du (wymaga zresetowania lokacji)")
+    SendMessageToPC(oChatter, Kolor("BIALY")+"#bn{ID} - [DM TOOL #4] mówienie oznaczonym NPC")
     SendMessageToPC(oChatter, "#opisz - [DM TOOL #6] zmiana imienia NPC/nazwy przedmiotu")
     SendMessageToPC(oChatter, Kolor("BIALY")+"#napisz - [DM TOOL #6] zmiana opisu NPC/przedmiotu")
     SendMessageToPC(oChatter, "#dm_opis_id {ID} - [DM TOOL #6] wczytanie opisu z panelu")
