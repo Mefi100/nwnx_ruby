@@ -17,7 +17,7 @@ else
 dzien_miesiaca = dzien[0]  
 end
 
-#ksiezyc = "Faza ksi�yca: "+faza(dzien_miesiaca, miesiac, rok)
+ksiezyc = "Faza ksi�yca: "+faza(dzien_miesiaca, miesiac, rok)
 
 miesiace = []
 miesiace = ["M�odego Stycznia", "Sennego Lutego", "Budz�cego Marca", "Wielobarwnego Kwietnia",
@@ -33,5 +33,5 @@ znak_zodiaku = "W tym miesi�cu S�o�ce znajduje si� w gwiazdozbiorze "+zo
 oPC = GetEnteringObject()
 SendMessageToPC(oPC, data)
 SendMessageToPC(oPC, znak_zodiaku)
-#SendMessageToPC(oPC, ksiezyc)
+SendMessageToPC(oPC, ksiezyc)
 
