@@ -1,4 +1,5 @@
 include NWScript
+include Kolory
 
 oChatter = GetPCChatSpeaker()
 sMessage = GetPCChatMessage()
@@ -61,20 +62,51 @@ if sMessage[0, 1] == "#"
     lLoc = GetLocation(oChatter)
     CreateObject(OBJECT_TYPE_CREATURE, sMsg, lLoc)
     
-elsif sCmd == "#item" && nDM == 1
+  elsif sCmd == "#item" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     CreateItemOnObject(sMsg, oChatter, 1)
     
-elsif sCmd == "#obiekt" && nDM == 1
+  elsif sCmd == "#obiekt" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     lLoc = GetLocation(oChatter)
     CreateObject(OBJECT_TYPE_PLACEABLE, sMsg, lLoc)
     
-elsif sCmd[0 .. 2] == "#bn" && nDM == 1
+  elsif sCmd[0 .. 2] == "#bn" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     oSpeaker = GetLocalObject(oChatter, "dm_speaker_"+sCmd[3 .. 3])
     AssignCommand(oSpeaker, SpeakString(sMsg))
+      
+  elsif sCmd == "#dm_obiekt_id" && nDM == 1
+    nID=sMsg.to_i
+    SetLocalInt(oChatter, "dm_obiekt_id", nID)
     
+  elsif sCmd == "#dm_obiekt_app" && nDM == 1
+    nID=sMsg.to_i
+    SetLocalInt(oChatter, "dm_obiekt_app", nID)
+    
+  elsif sCmd == "#dm_opis_id" && nDM == 1
+    nID=sMsg.to_i
+    SetLocalInt(oChatter, "dm_opis_id", nID)
+    
+  elsif sCmd == "#dm_lokacja" && nDM == 1
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK)
+    #TO DO
+    SendMessageToPC(oChatter, "Wczytywanie lokacji "+sMsg+"...")
+    
+  elsif sCmd == "#dm_komendy" && nDM == 1
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK)
+    SendMessageToPC(oChatter, Kolor("BIALY")+"LISTA KOMEND MG:")
+    SendMessageToPC(oChatter, "(W miejscu, gdzie jest {ID} trzeba wstawić konkretny numer - parametr komendy)")
+    SendMessageToPC(oChatter, Kolor("BIALY")+"#dm_obiekt_id {ID} - [DM TOOL #1] nadanie z panelu tekstu wyświetlanego przez obiekt")
+    SendMessageToPC(oChatter, "#dm_obiekt_app {ID} - [DM TOOL #1] nadanie obiektowi wyglądu (wymaga zresetowania lokacji)")
+    SendMessageToPC(oChatter, Kolor("BIALY")+"#bn{ID} - [DM TOOL #4] mówienie oznaczonym NPC")
+    SendMessageToPC(oChatter, "#opisz - [DM TOOL #6] zmiana imienia NPC/nazwy przedmiotu")
+    SendMessageToPC(oChatter, Kolor("BIALY")+"#napisz - [DM TOOL #6] zmiana opisu NPC/przedmiotu")
+    SendMessageToPC(oChatter, "#dm_opis_id {ID} - [DM TOOL #6] wczytanie opisu z panelu")
+    SendMessageToPC(oChatter, Kolor("BIALY")+"#item {RESREF} - stworzenie przedmiotu o podanym resrefie")
+    SendMessageToPC(oChatter, "#mob {RESREF} - stworzenie moba o podanym resrefie")
+    SendMessageToPC(oChatter, Kolor("BIALY")+"#dm_lokacja {RESREF} - stworzenie lokacji podanym resrefie")
+                
   end
   
 end
