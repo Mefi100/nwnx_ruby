@@ -17,21 +17,21 @@ def faza(d,m,r)
   faza = (faza*100).round / 100.0
   
   if faza == 1.0 || faza <= 0.02
-    return "Nów" 
+    return "Nï¿½w" 
     elsif faza > 0.02 && faza < 0.23
-        return "zbli¿a siê I kwadra..."
+        return "zbliï¿½a siï¿½ I kwadra..."
   elsif faza >= 0.23 && faza <= 0.26
     return "I kwadra"
     elsif faza > 0.26 && faza < 0.49
-        return "zbli¿a siê pe³nia..."
+        return "zbliï¿½a siï¿½ peï¿½nia..."
   elsif faza >= 0.49 && faza <= 0.51
-    return "Pe³nia"
+    return "Peï¿½nia"
     elsif faza >  0.51 && faza <  0.73
-        return "zbli¿a siê III kwadra"
+        return "zbliï¿½a siï¿½ III kwadra"
   elsif faza >= 0.73 && faza <= 0.77
     return "III kwadra"
   else
-    return "zbli¿a siê nów..."
+    return "zbliï¿½a siï¿½ nï¿½w..."
   end 
   
 end
