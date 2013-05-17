@@ -1,28 +1,28 @@
 module Kolory
-  #COLORTOKEN = %q{                  ##################$%&'()*+,-./0123456789:;;==?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[[]^_`abcdefghijklmnopqrstuvwxyz{|}~~â‚¬Ââ€šÆ’â€â€¦â€ â€¡Ë†â€°Å â€¹Å’ÂÅ½ÂÂâ€˜â€™â€œâ€â€¢â€“â€”Ëœâ„¢Å¡â€ºÅ“ÂÅ¾Å¸Â¡Â¡Â¢Â£Â¤Â¥Â¦Â§Â¨Â©ÂªÂ«Â¬Â¬Â®Â¯Â°Â±Â²Â³Â´ÂµÂ¶Â·Â¸Â¹ÂºÂ»Â¼Â½Â¾Â¿Ã€ÃÃ‚ÃƒÃ„Ã…Ã†Ã‡ÃˆÃ‰ÃŠÃ‹ÃŒÃÃÃÃÃ‘Ã’Ã“Ã”Ã•Ã–Ã—Ã˜Ã™ÃšÃ›ÃœÃÃÃŸÃ Ã¡Ã¢Ã£Ã¤Ã¥Ã¦Ã§Ã¨Ã©ÃªÃ«Ã¬Ã­Ã®Ã¯Ã°Ã±Ã²Ã³Ã´ÃµÃ¶Ã·Ã¸Ã¹ÃºÃ»Ã¼Ã½Ã¾Ã¾}
-    
+COLORTOKEN =%q{                  ##################$%&'()*+,-./0123456789:;;==?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[[]^_`abcdefghijklmnopqrstuvwxyz{|}~~€‚ƒ„…†‡ˆ‰Š‹Œ‘’“”•–—˜™š›œŸ¡¡¢£¤¥¦§¨©ª«¬¬®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõö÷øùúûüışş}
+
     def Kolor(skolor)
         if skolor == "BIALY"
-          return "<cË™Ë™Ë™>"
+          return "<c···>"
         elsif skolor == "BLEKITNY"
-          return "<c Ë™Ë™>"
+          return "<c ··>"
         elsif skolor == "CZERWONY"
-          return "<cË™  >"
+          return "<c·  >"
         elsif skolor == "NIEBIESKI"
-          return "<c  Ë™>"
+          return "<c  ·>"
         elsif skolor == "PURPUROWY"
-          return "<cË™ Ë™>"
+          return "<c· ·>"
         elsif skolor == "ZIELONY"
-          return "<c Ë™ >"
+          return "<c · >"
         elsif skolor == "ZOLTY"
-          return "<cË™Ë™ >"
+          return "<c·· >"
         else 
           return ""
         end 
     end
 
     def ColorString(sText,nRed=255,nGreen=255,nBlue=255)
-   # return "<c" + COLORTOKEN[nRed .. nRed] + COLORTOKEN[nGreen .. nGreen] + COLORTOKEN[nBlue .. nBlue] + ">" + sText + "</c>"
+		return "<c" + COLORTOKEN[nRed .. nRed] + COLORTOKEN[nGreen .. nGreen] + COLORTOKEN[nBlue .. nBlue] + ">" + sText + "</c>"
      return ""
     end
 
