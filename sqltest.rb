@@ -9,11 +9,10 @@ file.each {|line|
 config = contents.split
 
 begin
-    con = Mysql.new config[1], config[3], config[5]
+    con = Mysql.new config[1], config[3], config[5], "nwn"
 
-    con.list_dbs.each do |db|
-        puts db
-    end
+rs = con.query('select * from kk_spawn')
+rs.each_hash { |h| puts h['new_name']}
     
 rescue Mysql::Error => e
     puts e.errno
