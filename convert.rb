@@ -2,7 +2,7 @@ require 'rubygems'
 require 'mysql'
 include NWScript
 
-file = File.open("mysql.cfg", "r")
+file = File.open("/var/scripts/ruby/mysql.cfg", "r")
 contents = ""
 file.each {|line|
   contents << line
@@ -13,11 +13,10 @@ begin
     con = Mysql.new config[1], config[3], config[5], config[7]
     
 x = 0
-i = 0
 oCWP = GetObjectByTag("RS_CREATURE",x)
 oMyArea = GetArea($OBJECT_SELF)
 
-  while((OBJECT_INVALID != GetIsObjectValid(oCWP)) && i < 1000) 
+  while TRUE == GetIsObjectValid(oCWP) 
             oArea = GetArea(oCWP)          
             
             if (oArea == oMyArea)
@@ -27,17 +26,17 @@ oMyArea = GetArea($OBJECT_SELF)
               lLoc_x = lLoc.x.to_s
               lLoc_y = lLoc.y.to_s
               lLoc_z = lLoc.z.to_s
-              #lLoc_o = lLoc.get_facing().to_s
+              lLoc_o = GetFacingFromLocation(lLoc).to_s
               new_name = GetLocalString(oCWP, "New Name of Creature")
               action = GetLocalInt(oCWP, "Action").to_s
               time = GetLocalInt(oCWP, "Time of Day").to_s
               chance = GetLocalInt(oCWP, "Percent Chance To Spawn").to_s
               min = GetLocalInt(oCWP, "Number of Creatures Max").to_s
               max = GetLocalInt(oCWP, "Number of Creatures Min").to_s
-              puts sAreaResRef+" :: "+sMobResRef+" :: "+lLoc_x+"/"+lLoc_y+"/"+lLoc_z+" ::" +new_name+" : "+action+" : "+time+" : "+chance+" "+min+" - "+max
+              
               #rs = con.query('INSERT INTO kk_spawn VALUES (NULL, )')  
             end
-            i = i + 1
+            
             x = x + 1
             
             oCWP = GetObjectByTag("RS_CREATURE",x)
