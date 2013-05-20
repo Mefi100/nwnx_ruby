@@ -343,13 +343,14 @@ if sMessage[0, 1] == "#"
   sMessage = sMessage.split(' ')
   
   sCmd = sMessage[0]
-  sMsg = sMessage[1]
   
   if sCmd == "#kk"
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     ExecCommand(oChatter, sMessage)
     
   elsif sCmd == "#tow"
+    sMessage.slice!(0)
+    sMsg = sMessage.join(' ')
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     oTowarzysz = GetHenchman(oChatter) 
     if OBJECT_INVALID != oTowarzysz
@@ -357,30 +358,44 @@ if sMessage[0, 1] == "#"
     end   
     
   elsif sCmd == "#prz"
+    sMessage.slice!(0)
+    sMsg = sMessage.join(' ')
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     AssociateTalk(oChatter, ASSOCIATE_TYPE_SUMMONED, sMsg) 
 
   elsif sCmd == "#dom"
+    sMessage.slice!(0)
+    sMsg = sMessage.join(' ')
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     AssociateTalk(oChatter, ASSOCIATE_TYPE_DOMINATED, sMsg)
     
   elsif sCmd == "#chow"
+    sMessage.slice!(0)
+    sMsg = sMessage.join(' ')
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     AssociateTalk(oChatter, ASSOCIATE_TYPE_FAMILIAR, sMsg)
     
   elsif sCmd == "#zw"
+    sMessage.slice!(0)
+    sMsg = sMessage.join(' ')
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     AssociateTalk(oChatter, ASSOCIATE_TYPE_ANIMALCOMPANION, sMsg)
     
   elsif sCmd == "#opisz"
+    sMessage.slice!(0)
+    sMsg = sMessage.join(' ')
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     SetLocalString(oChatter, "opisz", sMsg)
     
   elsif sCmd == "#napisz"
+    sMessage.slice!(0)
+    sMsg = sMessage.join(' ')
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     SetLocalString(oChatter, "napisz", sMsg)
     
   elsif sCmd == "#nazwij" && nDM == 1
+    sMessage.slice!(0)
+    sMsg = sMessage.join(' ')
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     oItem =  GetItemPossessedBy(oChatter, "mf_berlo_bajerow")
     SetLocalString(oItem, "nazwij", sMsg)   
@@ -400,6 +415,8 @@ if sMessage[0, 1] == "#"
     CreateObject(OBJECT_TYPE_PLACEABLE, sMsg, lLoc)
     
   elsif sCmd[0 .. 2] == "#bn" && nDM == 1
+    sMessage.slice!(0)
+    sMsg = sMessage.join(' ')
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     oSpeaker = GetLocalObject(oChatter, "dm_speaker_"+sCmd[3 .. 3])
     NWScript.AssignCommand(oSpeaker){SpeakString(sMsg)}
@@ -423,17 +440,17 @@ if sMessage[0, 1] == "#"
     
   elsif sCmd == "#dm_komendy" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
-    SendMessageToPC(oChatter, Kolor("BIALY")+"LISTA KOMEND MG:")
+    SendMessageToPC(oChatter, ColorString("LISTA KOMEND MG:"))
     SendMessageToPC(oChatter, "(W miejscu, gdzie jest {ID} trzeba wstawiæ konkretny numer - parametr komendy)")
-    SendMessageToPC(oChatter, Kolor("BIALY")+"#dm_obiekt_id {ID} - [DM TOOL #1] nadanie z panelu tekstu wyœwietlanego przez obiekt")
+    SendMessageToPC(oChatter, ColorString("#dm_obiekt_id {ID} - [DM TOOL #1] nadanie z panelu tekstu wyœwietlanego przez obiekt"))
     SendMessageToPC(oChatter, "#dm_obiekt_app {ID} - [DM TOOL #1] nadanie obiektowi wygl¹du (wymaga zresetowania lokacji)")
-    SendMessageToPC(oChatter, Kolor("BIALY")+"#bn{ID} - [DM TOOL #4] mówienie oznaczonym NPC")
+    SendMessageToPC(oChatter, ColorString("#bn{ID} - [DM TOOL #4] mówienie oznaczonym NPC"))
     SendMessageToPC(oChatter, "#opisz - [DM TOOL #6] zmiana imienia NPC/nazwy przedmiotu")
-    SendMessageToPC(oChatter, Kolor("BIALY")+"#napisz - [DM TOOL #6] zmiana opisu NPC/przedmiotu")
+    SendMessageToPC(oChatter, ColorString("#napisz - [DM TOOL #6] zmiana opisu NPC/przedmiotu"))
     SendMessageToPC(oChatter, "#dm_opis_id {ID} - [DM TOOL #6] wczytanie opisu z panelu")
-    SendMessageToPC(oChatter, Kolor("BIALY")+"#item {RESREF} - stworzenie przedmiotu o podanym resrefie")
+    SendMessageToPC(oChatter, ColorString("#item {RESREF} - stworzenie przedmiotu o podanym resrefie"))
     SendMessageToPC(oChatter, "#mob {RESREF} - stworzenie moba o podanym resrefie")
-    SendMessageToPC(oChatter, Kolor("BIALY")+"#dm_lokacja {RESREF} - stworzenie lokacji podanym resrefie")
+    SendMessageToPC(oChatter, ColorString("#dm_lokacja {RESREF} - stworzenie lokacji podanym resrefie"))
                 
   end
   
