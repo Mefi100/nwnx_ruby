@@ -1,4 +1,3 @@
-module NWScript
 module NWNX_Areas
   
   def LoadArea(sResRef)
@@ -16,5 +15,4 @@ module NWNX_Areas
     SetLocalString(oArea, "NWNX!AREAS!SET_AREA_NAME", sName)
   end
   
-end
 end
