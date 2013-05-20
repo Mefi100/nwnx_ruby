@@ -35,8 +35,7 @@ def ExecCommand(oChatter, sMessage)
   elsif sMsg == "str"
     nMod = GetAbilityModifier(ABILITY_STRENGTH, oChatter)
     nRoll = rand(10)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Si³y: " + nRoll.to_s + " + " + nMod.to_s
-    + " = " + (nMod+nRoll).to_s
+    sSpeak = Kolor("BLEKITNY")+"Test Si³y: " + nRoll.to_s + " + " + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "dex"
     nMod = GetAbilityModifier(ABILITY_DEXTERITY, oChatter)
