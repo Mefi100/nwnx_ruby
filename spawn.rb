@@ -12,7 +12,9 @@ begin
     con = Mysql.new config[1], config[3], config[5], config[7]
 
 rs = con.query('select * from kk_spawn')
-rs.each_hash { |h| puts h['new_name']}
+rs.each_hash { |h|
+  puts h['area_resref']
+  puts h['new_name'] }
     
 rescue Mysql::Error => e
     puts e.errno
