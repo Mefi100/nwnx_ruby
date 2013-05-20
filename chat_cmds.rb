@@ -403,16 +403,16 @@ if sMessage[0, 1] == "#"
   elsif sCmd == "#mob" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     lLoc = GetLocation(oChatter)
-    CreateObject(OBJECT_TYPE_CREATURE, sMsg, lLoc)
+    CreateObject(OBJECT_TYPE_CREATURE, sMessage[1], lLoc)
     
   elsif sCmd == "#item" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
-    CreateItemOnObject(sMsg, oChatter, 1)
+    CreateItemOnObject(sMessage[1], oChatter, 1)
     
   elsif sCmd == "#obiekt" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     lLoc = GetLocation(oChatter)
-    CreateObject(OBJECT_TYPE_PLACEABLE, sMsg, lLoc)
+    CreateObject(OBJECT_TYPE_PLACEABLE, sMessage[1], lLoc)
     
   elsif sCmd[0 .. 2] == "#bn" && nDM == 1
     sMessage.slice!(0)
