@@ -346,6 +346,7 @@ if sMessage[0, 1] == "#"
   sMsg = sMessage[1]
   
   if sCmd == "#kk"
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     ExecCommand(oChatter, sMessage)
     
   elsif sCmd == "#tow"
