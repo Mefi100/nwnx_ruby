@@ -13,8 +13,17 @@ begin
 
 rs = con.query('select * from kk_spawn')
 rs.each_hash { |h|
-  puts h['area_resref']
-  puts h['new_name'] }
+  
+  mob_resref = h['mob_resref']
+  new_name = h['new_name']
+  action = h['action']  
+  chance = h['chance']  
+  spawn_x = h['spawn_x'].to_f
+  spawn_y = h['spawn_y'].to_f
+  spawn_z = h['spawn_z'].to_f
+  spawn_o = h['spawn_o'].to_f 
+    
+  puts (spawn_x + spawn_y).to_s }
     
 rescue Mysql::Error => e
     puts e.errno
