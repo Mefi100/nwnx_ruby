@@ -35,37 +35,37 @@ def ExecCommand(oChatter, sMessage)
   elsif sMsg == "str"
     nMod = GetAbilityModifier(ABILITY_STRENGTH, oChatter)
     nRoll = rand(10)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Si³y: " + nRoll.to_s+ " + " + nMod.to_s
+    sSpeak = Kolor("BLEKITNY")+"Test Si³y: " + nRoll.to_s + " + " + nMod.to_s
     + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "dex"
     nMod = GetAbilityModifier(ABILITY_DEXTERITY, oChatter)
     nRoll = rand(10)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Zrêcznoœci: " + nRoll.to_s+ " + " + nMod.to_s
+    sSpeak = Kolor("BLEKITNY")+"Test Zrêcznoœci: " + nRoll.to_s + " + " + nMod.to_s
     + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "con"
     nMod = GetAbilityModifier(ABILITY_CONSTITUTION, oChatter)
     nRoll = rand(10)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Kondycji: " + nRoll.to_s+ " + " + nMod.to_s
+    sSpeak = Kolor("BLEKITNY")+"Test Kondycji: " + nRoll.to_s + " + " + nMod.to_s
     + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "int"
     nMod = GetAbilityModifier(ABILITY_INTELLIGENCE, oChatter)
     nRoll = rand(10)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Inteligencji: " + nRoll.to_s+ " + " + nMod.to_s
+    sSpeak = Kolor("BLEKITNY")+"Test Inteligencji: " + nRoll.to_s + " + " + nMod.to_s
     + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "wis"
     nMod = GetAbilityModifier(ABILITY_WISDOM, oChatter)
     nRoll = rand(10)+1
-    sSpeak = Kolor("BLEKITNY")+"Test M¹droœci: " + nRoll.to_s+ " + " + nMod.to_s
+    sSpeak = Kolor("BLEKITNY")+"Test M¹droœci: " + nRoll.to_s + " + " + nMod.to_s
     + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "cha"
     nMod = GetAbilityModifier(ABILITY_CHARISMA, oChatter)
     nRoll = rand(10)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Charyzmy: " + nRoll.to_s+ " + " + nMod.to_s
+    sSpeak = Kolor("BLEKITNY")+"Test Charyzmy: " + nRoll.to_s + " + " + nMod.to_s
     + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
     
@@ -73,92 +73,92 @@ def ExecCommand(oChatter, sMessage)
   elsif sMsg == "akt"
     nMod = GetSkillRank(SKILL_PERFORM, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Aktorstwo: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Aktorstwo: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "zro"
     nMod = GetSkillRank(SKILL_ANIMAL_EMPATHY, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Zrozumienie ZwierzÂ¹t: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Zrozumienie ZwierzÂ¹t: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "wyc"
     nMod = GetSkillRank(SKILL_APPRAISE, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wycena: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wycena: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "ble"
     nMod = GetSkillRank(SKILL_BLUFF, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Blef: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Blef: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "kon"
     nMod = GetSkillRank(SKILL_CONCENTRATION, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Koncentracja: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Koncentracja: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "tpa"
     nMod = GetSkillRank(SKILL_CRAFT_ARMOR, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Tworzenie Pancerza: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Tworzenie Pancerza: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "tpu"
     nMod = GetSkillRank(SKILL_CRAFT_TRAP, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Tworzenie PuÂ³apki: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Tworzenie PuÂ³apki: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "tbr"
     nMod = GetSkillRank(SKILL_CRAFT_WEAPON, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Tworzenie Broni: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Tworzenie Broni: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "roz"
     nMod = GetSkillRank(SKILL_DISABLE_TRAP, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Rozbrajanie PuÂ³apek: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Rozbrajanie PuÂ³apek: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "dys"
     nMod = GetSkillRank(SKILL_DISCIPLINE, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Dyscyplina: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Dyscyplina: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "lecz"
     nMod = GetSkillRank(SKILL_HEAL, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Leczenie: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Leczenie: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "ukr"
     nMod = GetSkillRank(SKILL_HIDE, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Ukrywanie: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Ukrywanie: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "zas"
     nMod = GetSkillRank(SKILL_INTIMIDATE, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Zastraszanie: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Zastraszanie: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "nas"
     nMod = GetSkillRank(SKILL_LISTEN, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - NasÂ³uchiwanie: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - NasÂ³uchiwanie: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "wba"
     nMod = GetLevelByClass(CLASS_TYPE_BARD, oChatter) 
     nMod += GetAbilityModifier(ABILITY_INTELLIGENCE, oChatter)
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza bardÃ³w: " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza bardÃ³w: " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "war"
@@ -176,7 +176,7 @@ def ExecCommand(oChatter, sMessage)
       end
       
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Architektura): " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Architektura): " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "wge"
@@ -190,7 +190,7 @@ def ExecCommand(oChatter, sMessage)
       end
       
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Geografia): " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Geografia): " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "whi"
@@ -204,7 +204,7 @@ def ExecCommand(oChatter, sMessage)
       end
       
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Historia): " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Historia): " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "wna"
@@ -218,7 +218,7 @@ def ExecCommand(oChatter, sMessage)
       end
       
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Natura): " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Natura): " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}   
   elsif sMsg == "wpl"
@@ -232,7 +232,7 @@ def ExecCommand(oChatter, sMessage)
       end
       
     nRoll = rand(20)+1
-    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Plany): " + nRoll.to_s+ " + "
+    sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Plany): " + nRoll.to_s + " + "
       + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "wpl"
@@ -250,7 +250,7 @@ def ExecCommand(oChatter, sMessage)
     end
     
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Tajemna): " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Tajemna): " + nRoll.to_s + " + "
     + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "wre"
@@ -264,7 +264,7 @@ def ExecCommand(oChatter, sMessage)
     end
     
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Religia): " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Religia): " + nRoll.to_s + " + "
     + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "wsz"
@@ -278,79 +278,79 @@ def ExecCommand(oChatter, sMessage)
     end
     
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (WÂ³adcy i szlachta): " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (WÂ³adcy i szlachta): " + nRoll.to_s + " + "
     + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "cich"
   nMod = GetSkillRank(SKILL_MOVE_SILENTLY, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Cichy ChÃ³d: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Cichy ChÃ³d: " + nRoll.to_s + " + "
     + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "otw"
   nMod = GetSkillRank(SKILL_OPEN_LOCK, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Otwieranie ZamkÃ³w: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Otwieranie ZamkÃ³w: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "par"
   nMod = GetSkillRank(SKILL_PARRY, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Parowanie: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Parowanie: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "dyp"
   nMod = GetSkillRank(SKILL_PERSUADE, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Dyplomacja: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Dyplomacja: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "kra"
   nMod = GetSkillRank(SKILL_PICK_POCKET, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - KradzieÂ¿ Kieszonkowa: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - KradzieÂ¿ Kieszonkowa: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "jez"
   nMod = GetSkillRank(SKILL_RIDE, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - JeÅ¸dziectwo: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - JeÅ¸dziectwo: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "prze"
   nMod = GetSkillRank(SKILL_SEARCH, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Przeszukiwanie: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Przeszukiwanie: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)} 
   elsif sMsg == "zpu"
   nMod = GetSkillRank(SKILL_SET_TRAP, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Zastawianie PuÂ³apkek: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Zastawianie PuÂ³apkek: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "czar"
   nMod = GetSkillRank(SKILL_SPELLCRAFT, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Czaroznastwo: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Czaroznastwo: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "spo"
   nMod = GetSkillRank(SKILL_SPOT, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - SpostrzegawczoÅ“Ã¦: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - SpostrzegawczoÅ“Ã¦: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "pro"
   nMod = GetSkillRank(SKILL_TAUNT, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Prowokacja: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Prowokacja: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "upa"
   nMod = GetSkillRank(SKILL_TUMBLE, oChatter)
   nRoll = rand(20)+1
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Upadanie: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Upadanie: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
   elsif sMsg == "wpo"
@@ -365,7 +365,7 @@ def ExecCommand(oChatter, sMessage)
       nMod += 10 
     end
   
-  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wyczucie Pobudek: " + nRoll.to_s+ " + "
+  sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wyczucie Pobudek: " + nRoll.to_s + " + "
   + nMod.to_s + " = " + (nMod+nRoll).to_s
   NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
       
