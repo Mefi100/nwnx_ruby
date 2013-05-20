@@ -53,6 +53,7 @@ rs.each_hash { |h|
   if chance >= (random(100)+1) 
     NWScript.DelayCommand(fRandomDelay){
     oCreature = CreateObject(OBJECT_TYPE_CREATURE, mob_resref, l_location)
+    SetLocalInt(oCreature, "spawned", 1)
     
       if new_name != ''
         SetName(oCreature, new_name)
