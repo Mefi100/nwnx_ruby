@@ -211,7 +211,7 @@ def ExecCommand(oChatter, sMessage)
     nRoll = rand(20)+1
     sSpeak = Kolor("BLEKITNY")+"Test Umiejêtnoœci - Wiedza (Plany): " + nRoll.to_s + " + " + nMod.to_s + " = " + (nMod+nRoll).to_s
     NWScript.AssignCommand(oChatter){SpeakString(sSpeak)}
-  elsif sMsg == "wpl"
+  elsif sMsg == "wta"
   nMod = GetSkillRank(35, oChatter)
     if 1 == GetHasFeat(2199, oChatter)
       nMod += 3 
