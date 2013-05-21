@@ -16,10 +16,11 @@ x = 0
 oCWP = GetObjectByTag("RS_CREATURE",x)
 oMyArea = GetArea($OBJECT_SELF)
 
-  while TRUE == GetIsObjectValid(oCWP) 
+  while (1 == GetIsObjectValid(oCWP)) 
             oArea = GetArea(oCWP)          
-            
+           
             if (oArea == oMyArea)
+		
               sAreaResRef = "'"+GetResRef(oArea)+"'"
               sMobResRef =  "'"+GetName(oCWP)+"'" 
               lLoc = GetLocation(oCWP)
@@ -33,7 +34,7 @@ oMyArea = GetArea($OBJECT_SELF)
               chance = GetLocalInt(oCWP, "Percent Chance To Spawn").to_s
               min = GetLocalInt(oCWP, "Number of Creatures Max").to_s
               max = GetLocalInt(oCWP, "Number of Creatures Min").to_s
-              
+              SendMessageToPC($OBJECT_SELF, GetName(oCWP) + " :: " + new_name + " " + time + " " + action)
               #rs = con.query('INSERT INTO kk_spawn VALUES (NULL, )')  
             end
             
