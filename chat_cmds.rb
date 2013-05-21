@@ -1,6 +1,8 @@
 require 'kolor.rb'
+require 'NWNX_Areas'
 include NWScript
 include Kolory
+include NWScript::NWNX_Areas
 
 oChatter = GetPCChatSpeaker()
 sMessage = GetPCChatMessage()
@@ -435,9 +437,10 @@ if sMessage[0, 1] == "#"
     
   elsif sCmd == "#dm_lokacja" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
-    oMod = GetModule()
-    SetLocalString(oMod, "NWNX!AREAS!CREATE_AREA", sMessage[1])
-    GetLocalObject(oMod, "NWNX!AREAS!GET_LAST_AREA_ID")
+    LoadArea(sMessage[1])
+    #oMod = GetModule()
+    #SetLocalString(oMod, "NWNX!AREAS!CREATE_AREA", sMessage[1])
+    #GetLocalObject(oMod, "NWNX!AREAS!GET_LAST_AREA_ID")
     SendMessageToPC(oChatter, "Wczytywanie lokacji "+sMessage[1]+"...")
     
   elsif sCmd == "#dm_komendy" && nDM == 1
