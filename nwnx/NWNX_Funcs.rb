@@ -207,6 +207,10 @@ module NWNX_Funcs
     return NWNXFuncsOne(oCreature, "NWNX!FUNCS!SETACNATURALBASE", nAC)
   end
   
+  def SetSavingThrowBonus (oCreature, nSave, nValue)
+    NWNXFuncsTwo(oCreature, "NWNX!FUNCS!SETSAVINGTHROWBONUS", nSave, nValue)
+  end
+  
 end
 
 end
