@@ -211,6 +211,10 @@ module NWNX_Funcs
     NWNXFuncsTwo(oCreature, "NWNX!FUNCS!SETSAVINGTHROWBONUS", nSave, nValue)
   end
   
+  def SetMaxHitPoints (oCreature, nHP)
+    return NWNXFuncsOne(oCreature, "NWNX!FUNCS!SETMAXHITPOINTS", nHP)
+  end
+  
 end
 
 end
