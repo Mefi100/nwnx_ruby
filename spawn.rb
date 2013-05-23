@@ -2,7 +2,8 @@ require 'rubygems'
 require 'mysql'
 include NWScript
 
-file = File.open("mysql.cfg", "r")
+
+file = File.open("/var/scripts/ruby/mysql.cfg", "r")
 contents = ""
 file.each {|line|
   contents << line
@@ -28,6 +29,7 @@ end
 
 begin
     con = Mysql.new config[1], config[3], config[5], config[7]
+
     
 #oArea = $OBJECT_SELF 
 oArea = GetArea($OBJECT_SELF)   #do testow        
@@ -36,9 +38,9 @@ sTime = GetGameTime()
     
 query = 'SELECT * FROM kk_spawn WHERE area_resref='+sAreaResRef+sTime+' AND active=1'
 
+
 rs = con.query(query)
 rs.each_hash { |h|
-  
   mob_resref = h['mob_resref']
   new_name = h['new_name']
   action = h['action'].to_i  
@@ -47,16 +49,18 @@ rs.each_hash { |h|
   spawn_y = h['spawn_y'].to_f
   spawn_z = h['spawn_z'].to_f
   spawn_o = h['spawn_o'].to_f 
-    
+  
   v_location = Vector(spawn_x, spawn_y, spawn_z)  
   l_location = Location(oArea, v_location, spawn_o)
-  fRandomDelay = (rand(100)+1)/100.0
+#  fRandomDelay = (rand(100)+1)/100.0
   
-  if chance >= (random(100)+1) 
-    NWScript.DelayCommand(fRandomDelay){
+  if 100 >= (rand(100)+1) 
+#SendMessageToPC($OBJECT_SELF, "Delay = "+fRandomDelay.to_s)
+#NWScript.DelayCommand(fRandomDelay){ SendMessageToPC($OBJECT_SELF, "oH NOES! Delay = "+fRandomDelay.to_s) }
+  #  NWScript.DelayCommand(fRandomDelay){
     oCreature = CreateObject(OBJECT_TYPE_CREATURE, mob_resref, l_location)
     SetLocalInt(oCreature, "spawned", 1)
-    
+    SendMessageToPC($OBJECT_SELF, "test001!")
       if new_name != ''
         SetName(oCreature, new_name)
       end
@@ -82,8 +86,8 @@ rs.each_hash { |h|
         oChair = GetNearestObjectByTag(sChair)
         NWScript.AssignCommand(oCreature){ActionSit(oChair)} 
       end
-      
-    }
+  #    SendMessageToPC($OBJECT_SELF, "test003!")
+  #  }
   end
   
   }
