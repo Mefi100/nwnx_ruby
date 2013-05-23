@@ -29,7 +29,9 @@ end
 begin
     con = Mysql.new config[1], config[3], config[5], config[7]
     
-sAreaResRef = "'"+GetResRef($OBJECT_SELF)+"'"
+#oArea = $OBJECT_SELF 
+oArea = GetArea($OBJECT_SELF)   #do testow        
+sAreaResRef = "'"+GetResRef(oArea)+"'"
 sTime = GetGameTime()  
     
 query = 'SELECT * FROM kk_spawn WHERE area_resref='+sAreaResRef+sTime+' AND active=1'
@@ -47,7 +49,7 @@ rs.each_hash { |h|
   spawn_o = h['spawn_o'].to_f 
     
   v_location = Vector(spawn_x, spawn_y, spawn_z)  
-  l_location = Location($OBJECT_SELF, v_location, spawn_o)
+  l_location = Location(oArea, v_location, spawn_o)
   fRandomDelay = (rand(100)+1)/100.0
   
   if chance >= (random(100)+1) 
