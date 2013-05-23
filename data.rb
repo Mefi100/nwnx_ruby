@@ -94,6 +94,22 @@ module KK_NWN_Data
   end 
   
  end
+ 
+def moon4(d,m,r)
+ faza = lunar(d,m,r) - lunar(d,m,r).to_i
+ faza = (faza*100).round / 100.0
+ 
+ if faza == 1.0 || faza <= 0.02
+   1 
+ elsif faza >= 0.23 && faza <= 0.26
+   2
+ elsif faza >= 0.49 && faza <= 0.51
+   3
+ elsif faza >= 0.73 && faza <= 0.77
+   4
+ end 
+ 
+end
 
 end 
    
