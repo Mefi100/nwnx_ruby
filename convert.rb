@@ -21,8 +21,8 @@ oMyArea = GetArea($OBJECT_SELF)
            
             if (oArea == oMyArea)
 		
-              sAreaResRef = "'"+GetResRef(oArea)+"'"
-              sMobResRef =  "'"+GetName(oCWP)+"'" 
+              sAreaResRef = GetResRef(oArea)
+              sMobResRef =  GetName(oCWP) 
               lLoc = GetLocation(oCWP)
               lLoc_x = lLoc.x.to_s
               lLoc_y = lLoc.y.to_s
