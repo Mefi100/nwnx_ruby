@@ -31,8 +31,7 @@ begin
     con = Mysql.new config[1], config[3], config[5], config[7]
 
     
-#oArea = $OBJECT_SELF 
-oArea = GetArea($OBJECT_SELF)   #do testow        
+oArea = $OBJECT_SELF      
 sAreaResRef = "'"+GetResRef(oArea)+"'"
 sTime = GetGameTime()  
     
@@ -52,15 +51,12 @@ rs.each_hash { |h|
   
   v_location = Vector(spawn_x, spawn_y, spawn_z)  
   l_location = Location(oArea, v_location, spawn_o)
-#  fRandomDelay = (rand(100)+1)/100.0
+
+  select(nil,nil,nil,0.01) #delay nwscript execution
   
   if 100 >= (rand(100)+1) 
-#SendMessageToPC($OBJECT_SELF, "Delay = "+fRandomDelay.to_s)
-#NWScript.DelayCommand(fRandomDelay){ SendMessageToPC($OBJECT_SELF, "oH NOES! Delay = "+fRandomDelay.to_s) }
-  #  NWScript.DelayCommand(fRandomDelay){
     oCreature = CreateObject(OBJECT_TYPE_CREATURE, mob_resref, l_location)
     SetLocalInt(oCreature, "spawned", 1)
-    SendMessageToPC($OBJECT_SELF, "test001!")
       if new_name != ''
         SetName(oCreature, new_name)
       end
@@ -86,8 +82,7 @@ rs.each_hash { |h|
         oChair = GetNearestObjectByTag(sChair)
         NWScript.AssignCommand(oCreature){ActionSit(oChair)} 
       end
-  #    SendMessageToPC($OBJECT_SELF, "test003!")
-  #  }
+
   end
   
   }
