@@ -32,13 +32,16 @@ oMyArea = GetArea($OBJECT_SELF)
               action = GetLocalInt(oCWP, "Action").to_s
               time = GetLocalInt(oCWP, "Time of Day").to_s
               chance = GetLocalInt(oCWP, "Percent Chance To Spawn").to_s
-              #min = GetLocalInt(oCWP, "Number of Creatures Max").to_s
-              #max = GetLocalInt(oCWP, "Number of Creatures Min").to_s
+              max = GetLocalInt(oCWP, "Number of Creatures Min") - 1
               #SendMessageToPC($OBJECT_SELF, GetName(oCWP) + " :: " + new_name + " " + time + " " + action)
               my_query = "INSERT INTO kk_spawn VALUES (NULL, '"+sAreaResRef+"','"+sMobResRef
               my_query += "',"+lLoc_x+","+lLoc_y+","+lLoc_z+","+lLoc_o+",'"+new_name+"',"
-              my_query += action+","+time+","+chance+", 1)"    
-              rs = con.query(my_query)  
+              my_query += action+","+time+","+chance+", 1)" 
+              
+              for i in 0..max   
+              rs = con.query(my_query)
+              end
+                
             end
             
             x = x + 1
