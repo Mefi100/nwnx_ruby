@@ -86,6 +86,8 @@ rs.each_hash { |h|
   end
   
   }
+  
+  SetLocalInt(oArea, "ssm", 1)
     
 rescue Mysql::Error => e
     puts e.errno
