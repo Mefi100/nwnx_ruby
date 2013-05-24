@@ -107,6 +107,8 @@ def moon4(d,m,r)
    3
  elsif faza >= 0.73 && faza <= 0.77
    4
+ else 
+   0
  end 
  
 end
