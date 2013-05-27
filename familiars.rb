@@ -9,7 +9,7 @@ lv = GetLevelByClass(CLASS_TYPE_WIZARD, oPC) + GetLevelByClass(CLASS_TYPE_SORCER
 
 oc = lv + 5
 kp = 10 + (lv/2).to_i
-intelekt = 5 + kp
+intelekt = kp - 5
 
 hp = (GetMaxHitPoints(oPC) / 2).to_i
 refleks = GetReflexSavingThrow(oPC)
