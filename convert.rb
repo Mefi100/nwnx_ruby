@@ -31,7 +31,7 @@ oMyArea = GetArea($OBJECT_SELF)
               new_name = GetLocalString(oCWP, "New Name of Creature")
               action = GetLocalInt(oCWP, "Action").to_s
               time = GetLocalInt(oCWP, "Time of Day").to_s
-              chance = GetLocalInt(oCWP, "Percent Chance To Spawn").to_s
+              chance = "100"
               max = GetLocalInt(oCWP, "Number of Creatures Min") - 1
               #SendMessageToPC($OBJECT_SELF, GetName(oCWP) + " :: " + new_name + " " + time + " " + action)
               my_query = "INSERT INTO kk_spawn VALUES (NULL, '"+sAreaResRef+"','"+sMobResRef
