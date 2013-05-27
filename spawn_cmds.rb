@@ -27,7 +27,7 @@ sMessage = sMessage.split(' ')
 sCmd = sMessage[1]
 
 if sCmd == "lista"
-  rs = con.query('select * from kk_spawn')
+  rs = con.query("select * from kk_spawn WHERE area_resref='"+sAreaResRef+"'")
   rs.each_hash { |h| 
     sSpawnPoint = "ResRef: "+h['mob_resref']+" Nowe imiê: "+h['new_name']+" Akcja: "+h['action']
     sSpawnPoint += " Czas: "+ h['time'] + " Szansa: "+ h['chance'] + " Aktywne "+h['active']
