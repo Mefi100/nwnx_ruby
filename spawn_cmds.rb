@@ -28,7 +28,7 @@ sCmd = sMessage[1]
 if sCmd == "lista"
   rs = con.query('select * from kk_spawn')
   rs.each_hash { |h| 
-    sSpawnPoint = "ResRef: "+h['mob_resref']+" Nowe imie: "+h['new_name']+" Akcja: "+h['action']
+    sSpawnPoint = "ResRef: "+h['mob_resref']+" Nowe imiê: "+h['new_name']+" Akcja: "+h['action']
     sSpawnPoint += " Czas: "+ h['time'] + " Szansa: "+ h['chance'] + " Aktywne "+h['active']
     SendMessageToPC(oChatter, sSpawnPoint)  
   }
@@ -76,13 +76,13 @@ elsif sCmd == "-"
   rs = con.query(my_query)  
 elsif sCmd == "komendy"
   SendMessageToPC(oChatter, ColorString("LISTA KOMEND SYSTEMU SPAWNA:"))
-  SendMessageToPC(oChatter, "(W miejscu, gdzie jest {ID} trzeba wstawiï¿½ konkretny numer - parametr komendy)")
+  SendMessageToPC(oChatter, "(W miejscu, gdzie jest {ID} trzeba wstawiæ konkretny numer - parametr komendy)")
   SendMessageToPC(oChatter, ColorString("#spawn + {RESREF MOBA} : aktywuje spawn moba"))  
   SendMessageToPC(oChatter, "#spawn - {RESREF MOBA} : dezaktywuje spawn moba")
   SendMessageToPC(oChatter, ColorString("#spawn dodaj {RESREF MOBA} {SZANSA SPAWNA} {CZAS} {AKCJA} : dodaje spawn moba"))
-  SendMessageToPC(oChatter, ColorString("Argumenty SZANSA, CZAS i AKCJA nie sÄ… wymagane")) 
+  SendMessageToPC(oChatter, ColorString("Argumenty SZANSA, CZAS i AKCJA nie s¹ wymagane")) 
   SendMessageToPC(oChatter, ColorString("{SZANSA} to wartosc od 1 do 100 "))
-  SendMessageToPC(oChatter, ColorString("{CZAS} 111: zawsze, 666: noc, 777: dzien, 601: noc (now), 603: noc (pelnia)"))
+  SendMessageToPC(oChatter, ColorString("{CZAS} 111: zawsze, 777: dzieñ, 666: noc, 601: noc (nów), 603: noc (pe³nia)"))
   SendMessageToPC(oChatter, ColorString("{AKCJA} 1: spaceruje, 3: atak na gracza, 4: nic nie robi, 5: czci, 6: siedzi, 7: medytuje "))  
   SendMessageToPC(oChatter, "#spawn lista : lista spawnow (w nowym systemie)")
 end

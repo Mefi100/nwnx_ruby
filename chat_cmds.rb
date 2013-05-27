@@ -453,7 +453,9 @@ if sMessage[0, 1] == "#"
     SendMessageToPC(oChatter, ColorString("#item {RESREF} - stworzenie przedmiotu o podanym resrefie"))
     SendMessageToPC(oChatter, "#mob {RESREF} - stworzenie moba o podanym resrefie")
     SendMessageToPC(oChatter, ColorString("#dm_lokacja {RESREF} - stworzenie lokacji podanym resrefie"))
-                
+    
+  elsif sCmd == "#spawn" && nDM == 1
+    load 'spawn_cmds.rb'             
   end
   
 end
