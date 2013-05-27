@@ -20,6 +20,7 @@ oChatter = GetPCChatSpeaker()
 sMessage = GetPCChatMessage()
 oArea = GetArea(oChatter)
 sAreaResRef = GetResRef(oArea)
+SetPCChatVolume(TALKVOLUME_SILENT_TALK)
 
 sMessage = sMessage.split(' ')
 
@@ -81,7 +82,7 @@ elsif sCmd == "komendy"
   SendMessageToPC(oChatter, "#spawn - {RESREF MOBA} : dezaktywuje spawn moba")
   SendMessageToPC(oChatter, ColorString("#spawn dodaj {RESREF MOBA} {SZANSA SPAWNA} {CZAS} {AKCJA} : dodaje spawn moba"))
   SendMessageToPC(oChatter, ColorString("Argumenty SZANSA, CZAS i AKCJA nie s¹ wymagane")) 
-  SendMessageToPC(oChatter, ColorString("{SZANSA} to wartosc od 1 do 100 "))
+  SendMessageToPC(oChatter, ColorString("{SZANSA} to wartoœæ od 1 do 100 "))
   SendMessageToPC(oChatter, ColorString("{CZAS} 111: zawsze, 777: dzieñ, 666: noc, 601: noc (nów), 603: noc (pe³nia)"))
   SendMessageToPC(oChatter, ColorString("{AKCJA} 1: spaceruje, 3: atak na gracza, 4: nic nie robi, 5: czci, 6: siedzi, 7: medytuje "))  
   SendMessageToPC(oChatter, "#spawn lista : lista spawnow (w nowym systemie)")
