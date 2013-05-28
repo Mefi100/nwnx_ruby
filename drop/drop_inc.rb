@@ -1,3 +1,5 @@
+require 'rubygems'
+require 'mysql'
 include NWScript
 
 def RandomGem()
@@ -31,3 +33,19 @@ def RandomSpecialItem()
   tab = %w[mf_ds_tuba mf_ds_modl mf_treasure]
   return tab[rand(tab.length)]
 end
+
+def MfScrolls(sTyp, sLv)
+  file = File.open("/var/scripts/ruby/mysql.cfg", "r")
+  contents = ""
+  file.each {|line|
+    contents << line
+  }
+  config = contents.split
+  con = Mysql.new config[1], config[3], config[5], config[7]
+  query = "SELECT resref FROM kk_zwoje WHERE lv="+sLv+" AND typ='"+sTyp+"' ORDER BY RAND() LIMIT 1"
+  rs = con.query(query)
+  record = rs.fetch_hash
+  resref = record['resref']
+  con.close
+end
+
