@@ -14,6 +14,7 @@ def MfScrolls(sTyp, sLv)
   record = rs.fetch_hash
   resref = record['resref']
   con.close
+  resref
 end
 
 nZwoje_3=rand(3)+2
