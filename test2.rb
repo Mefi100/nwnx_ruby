@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'mysql'
+
 def MfScrolls(sTyp, sLv)
   file = File.open("/var/scripts/ruby/mysql.cfg", "r")
   contents = ""
