@@ -214,6 +214,11 @@ module NWNX_Funcs
   def SetMaxHitPoints (oCreature, nHP)
     return NWNXFuncsOne(oCreature, "NWNX!FUNCS!SETMAXHITPOINTS", nHP)
   end
+
+  def SetTag (oObject, sTag)
+    SetLocalString(oObject, "NWNX!FUNCS!SETTAG", sTag)
+    return GetLocalString(oObject, "NWNX!FUNCS!SETTAG")
+  end 
   
 end
 
