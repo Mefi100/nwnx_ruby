@@ -1,7 +1,7 @@
 require 'drop_inc'
 include NWScript
 
-oPC = $OBJECT_SELF
+oPC = GetItemActivator()
 nZwoje_3=rand(3)+1
 nZwojeHi=rand(3)+4
 nRoll = rand(100)+1
