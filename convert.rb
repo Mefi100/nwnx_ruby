@@ -36,7 +36,7 @@ oMyArea = GetArea($OBJECT_SELF)
               #SendMessageToPC($OBJECT_SELF, GetName(oCWP) + " :: " + new_name + " " + time + " " + action)
               my_query = "INSERT INTO kk_spawn VALUES (NULL, '"+sAreaResRef+"','"+sMobResRef
               my_query += "',"+lLoc_x+","+lLoc_y+","+lLoc_z+","+lLoc_o+",'"+new_name+"',"
-              my_query += action+","+time+","+chance+", 0)" 
+              my_query += action+","+time+","+chance+", 1)" 
               
               for i in 0..max   
               rs = con.query(my_query)

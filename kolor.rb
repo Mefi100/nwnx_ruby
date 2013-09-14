@@ -23,7 +23,6 @@ COLORTOKEN =%q{                  ##################$%&'()*+,-./0123456789:;;==?@
 
     def ColorString(sText,nRed=255,nGreen=255,nBlue=255)
 		return "<c" + COLORTOKEN[nRed .. nRed] + COLORTOKEN[nGreen .. nGreen] + COLORTOKEN[nBlue .. nBlue] + ">" + sText + "</c>"
-     return ""
     end
 
 end
