@@ -440,6 +440,12 @@ if sMessage[0, 1] == "#"
     LoadArea(sMessage[1])
     SendMessageToPC(oChatter, "Wczytywanie lokacji "+sMessage[1]+"...")
     
+  elsif sCmd == "#dm_floor" && nDM == 1
+    SetPCChatVolume(TALKVOLUME_SILENT_TALK)
+    $FLOOR = sMessage[1]
+    $FLOOR_HI = sMessage[2]
+    SendMessageToPC(oChatter, "Floor "+sMessage[1]+" na wysokoœci "+sMessage[2])
+    
   elsif sCmd == "#dm_komendy" && nDM == 1
     SetPCChatVolume(TALKVOLUME_SILENT_TALK)
     SendMessageToPC(oChatter, ColorString("LISTA KOMEND MG:"))
